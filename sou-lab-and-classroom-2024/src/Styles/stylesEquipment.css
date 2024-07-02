@@ -1,0 +1,430 @@
+
+/* Basic reset */
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    background-color: rgb(30, 33, 34);
+
+}
+.home-link {
+    display: block;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.home-link:hover {
+    background-color: #0056b3;
+}
+
+.nav a {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+input[type="text"], select, button {
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    background-color: rgb(30, 33, 34);
+    color: #f9f9f9;
+
+    
+}
+.nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color:rgb(30, 33, 34);
+    color:#f9f9f9;
+    border: 1px solid #5e4f4f;
+    
+}
+
+/* Table links for serial number */
+table a {
+    color: rgb(63, 94, 206); 
+    
+}
+
+table a:hover {
+    color: rgb(96, 178, 199); 
+    text-decoration: underline; 
+}
+
+/* Table header */
+th {
+    background-color: #860404;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table data */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #5e4f4f;
+    
+}
+
+tr:nth-child(even) {
+    background-color: rgb(30, 33, 34);
+}
+
+tr:hover {
+    background-color: #483f3f;
+}
+
+/* Add equipment button with icon */
+.add-equipment-btn {
+    display: inline-block;
+    background-color: #ffc107;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    outline: none;
+}
+
+
+/* Modal base styles */
+#addModal {
+    background-color: rgb(30, 33, 34);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    left: 50%;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 600px; /* Maximum width */
+    z-index: 2; /* Above other items */
+
+}
+
+/* Overlay */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1; /* Under the modal but above other items */
+}
+
+/* Form and elements styling */
+#addModal form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px; /* Space between inputs */
+    color:#f9f9f9
+}
+
+#addModal label {
+    display: block;
+    font-size: 16px;
+    color: #f9f9f9;
+    margin-bottom: 5px;
+}
+
+#addModal input[type="text"],
+#addModal select {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#addModal input[type="text"]:focus,
+#addModal select:focus {
+    outline: none;
+    border-color: #007bff; /* Focus color */
+}
+
+/* Buttons styling */
+#addModal input[type="submit"],
+#addModal button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Submit button */
+#addModal input[type="submit"] {
+    background-color: #28a745; 
+    color: #fff;
+}
+
+#addModal input[type="submit"]:hover {
+    background-color: #218838; /* Darker green */
+}
+
+#addModal button {
+    background-color: #dc3545; /* Bootstrap 'danger' red */
+    color: #fff;
+    margin-left: 15px; /* Space from the submit button */
+}
+
+#addModal button:hover {
+    background-color: #c82333; /* Darker red */
+}
+
+
+/* When modal is active, prevent background scrolling */
+body.modal-active {
+    overflow: hidden;
+}
+
+/* Adjustments to the modal to keep it within the viewport */
+#addModal {
+    max-height: calc(100vh - 80px); /* Set max height to viewport height minus padding */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+/* Overlay */
+.modal-overlay {
+    /* Keep overlay height equal to viewport height */
+    height: 100vh;
+}
+
+
+/* CSS for Update Edit Forms */
+form[action=""] {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    color:#f9f9f9
+}
+
+form[action=""] input[type="text"],
+form[action=""] select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+form[action=""] input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form[action=""] input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/*This for SearchBar style*/
+.SearchBar {
+
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px;
+    display: flex; /* Use flexbox to center align items */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Add some shadow for depth *!*/
+    margin: 30px auto; /* Center the search bar and add some margin to the top and bottom */
+    color:rgb(255, 255, 255);
+     /* Dark background color */
+}
+
+.SearchBar input[type="text"] {
+    border: 2px solid #007bff; /* Add a border to the input */
+    margin-right: 10px; /* Add some space between the input and the button */
+    padding: 10px 20px; /* Make the input taller and have some space on the sides */
+    /*width: calc(100% - 120px); !* Adjust width to account for button *!*/
+    border-radius: 20px; /* Round the corners of the input field */
+    font-size: 16px; /* Increase font size for better readability */
+    
+}
+
+.SearchBar input[type="submit"] {
+    border: none; /* Remove the border */
+    background-color: #007bff; /* Use a solid color for the button */
+    color: white; /* Contrast the text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border-radius: 20px; /* Round the corners */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+    font-size: 16px; /* Match the font size with the input */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.SearchBar input[type="submit"]:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+}
+
+
+.edit-update-form {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    color:#ffffff
+}
+
+.edit-update-form input[type="text"],
+.edit-update-form select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.edit-update-form input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-update-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/* Tooltip container */
+.edit-icon {
+    position: relative;
+    display: inline-block;
+    border-bottom: none; /* If you want no underline */
+    cursor: pointer;
+    color: #39bc39
+}
+
+/* Tooltip text */
+.edit-icon .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px; /* Use half of the width (set below) to center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.delete-icon .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px; /* Use half of the width (set below) to center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip container */
+.delete-icon {
+    position: relative;
+    display: inline-block;
+    border-bottom: none; /* If you want no underline */
+    cursor: pointer;
+    color: #bf3e3e;
+}
+
+.add-equipment-button {
+    background-color: #25bea9; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    cursor: pointer; /* Mouse pointer on hover */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border-radius: 20px; /* Round the corners */
+    align-items: center;
+
+}
+
+/* Style the button on hover */
+.add-equipment-button:hover {
+    background-color: #45a049;
+}
+
+
+.Add-Equipment {
+    padding: 10px 20px;
+    background-color: #007bff;  /* Primary action blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Add-Equipment:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+.Download-CSV{
+    padding: 10px 20px;
+    background-color: #007bff;  /* Primary action blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.Download-CSV:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* this is for  New Building, and New Room Number */
+.new-building-label {
+    color: #ffffff; /* Blue color, similar to your button highlights */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font */
+    font-size: 1rem; /* Appropriate font size */
+    margin-right: 10px; /* Space between the label and the select box */    
+    padding-left: 10px;
+
+}

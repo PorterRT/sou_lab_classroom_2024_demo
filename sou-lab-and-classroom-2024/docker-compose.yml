@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: SOULabAndClassroom2024Cap
+    volumes:
+      - ./src:/var/www/html
+      - vendor_data:/var/www/html/vendor
+    environment:
+      DB_HOST: MariaDBSOULabAndClassroom2024Cap
+      DB_USER: runyontrp
+      DB_PASSWORD: BmASNKgQxQSqwEbVDCbxvw8tsvJorPoY
+      DB_NAME: SOU_lab_and_classroom_2024
+      GOOGLE_CLIENT_ID: 955146479889-c8nd35q1fmff1ank0kk25j3g4fr68fku.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: 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
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_combined
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+  mariadb:
+    image: mariadb:latest
+    container_name: MariaDBSOULabAndClassroom2024Cap
+    environment:
+      MYSQL_ROOT_PASSWORD: BmASNKgQxQSqwEbVDCbxvw8tsvJorPoY
+      MYSQL_DATABASE: SOU_lab_and_classroom_2024
+      MYSQL_USER: runyontrp
+      MYSQL_PASSWORD: BmASNKgQxQSqwEbVDCbxvw8tsvJorPoY
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./SOULABCLASSBACKUP.sql:/docker-entrypoint-initdb.d/SOULABCLASSBACKUP.sql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:
+  vendor_data:

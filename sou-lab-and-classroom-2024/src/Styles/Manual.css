@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(30, 33, 34);
+    color: rgb(200, 195, 188);
+}
+
+.header {
+    background-color: rgb(30, 33, 34);
+    color: white;
+    padding: 20px 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    background: white;
+    border-radius: 4px;
+}
+
+.nav {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(30, 33, 34);
+    color: rgb(255, 255, 254);
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fefefe;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.section {
+    padding: 30px 20px;
+    border-bottom: 1px solid rgb(115, 107, 94);
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #fefefe;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 15px;
+}
+
+.section ul li img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.section ul li b {
+    color: #ffeb3b;
+}
+
+.footer {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+.logoutButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: rgb(216, 195, 195);
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.logoutButton a {
+    color: rgb(240, 242, 243); 
+    text-decoration: none;
+}
+
+.logoutButton:hover {
+    background-color: #2b982b; 
+    color: rgb(255, 255, 255); 
+    transform: translateY(-2px);
+}
+
+.logoutButton:active {
+    background-color: #a00b2e;
+    transform: translateY(0);
+}
+.home-link {
+    display: block;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.home-link:hover {
+    background-color: #0056b3;
+}

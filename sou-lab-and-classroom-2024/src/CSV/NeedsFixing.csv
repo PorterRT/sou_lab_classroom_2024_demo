@@ -1,0 +1,4 @@
+"Serial Number",Name,Type,Model,"Lease Year","Building Name","Room Number",Errors
+H4TGT1LHQ7H6,TS-AB101-Y9,Desktop,"Apple 24"" iMac M1","Year 9","Art Building (AB)",101,"Error found in ""Building Name"": Check spelling and match it to a building. If needed, go to the Buildings page to help"
+H4TGT1LLQ7H6,TS-AB124-Y9,Desktop,"Apple 24"" iMac M1","Year 9","Art Building (AB)",124,"Error found in ""Building Name"": Check spelling and match it to a building. If needed, go to the Buildings page to help"
+test,test,Desktop,10,10,"Art Building (AB)",111,"Error found in ""Building Name"": Check spelling and match it to a building. If needed, go to the Buildings page to help"

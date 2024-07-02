@@ -1,0 +1,371 @@
+
+/* Basic reset */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background: rgb(30, 33, 34);
+    color: rgb(200, 195, 188);
+    border-color: rgb(115, 107, 94);
+}
+
+html {
+    color-scheme: dark !important;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #5e4f4f;
+
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #5e4f4f;
+
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+    background-color: rgb(30, 33, 34);
+}
+
+
+
+/* Style the table header */
+th {
+    background-color: #860404;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #483f3f;
+}
+
+/* Responsive table */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-child(even) {
+        background-color: initial;
+    }
+    tr td {
+        display: block;
+        text-align: right;
+    }
+    tr td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    tr {
+        margin-bottom: 15px;
+        display: block;
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #f51b1b;
+    }
+}
+
+.home-link {
+    display: block;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.home-link:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"], select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.nav a:hover {
+    background-color: #0056b3;
+}
+
+                                /*This for SearchBar style*/
+.SearchBar {
+
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px;
+    display: flex; /* Use flexbox to center align items */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Add some shadow for depth *!*/
+    width: 50%; /* Set a max width */
+    margin: 30px auto; /* Center the search bar and add some margin to the top and bottom */
+}
+
+.SearchBar input[type="text"] {
+    border: 2px solid #dee2e6; /* Add a border to the input */
+    margin-right: 10px; /* Add some space between the input and the button */
+    padding: 10px 20px; /* Make the input taller and have some space on the sides */
+    /*width: calc(100% - 120px); !* Adjust width to account for button *!*/
+    border-radius: 20px; /* Round the corners of the input field */
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+.SearchBar input[type="submit"] {
+    border: none; /* Remove the border */
+    background-color: #007bff; /* Use a solid color for the button */
+    color: white; /* Contrast the text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border-radius: 20px; /* Round the corners */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+    font-size: 16px; /* Match the font size with the input */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.SearchBar input[type="submit"]:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+}
+
+
+
+
+.AddUserButton {
+    display: block;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    text-align: center; /* Center-align text for a button */
+    border-radius: 20px;
+    text-decoration: none; /* Remove default button styles */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.AddUserButton button {
+    all: unset; /* Remove default button styles */
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.AddUserButton:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+    transform: translateY(-2px);
+}
+
+.AddUserButton:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+
+
+                                /* Edit user form */
+#editUserForm {
+    display: none; /* Initially hidden */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(30, 33, 34);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#editUserForm h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#editUserForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#editUserForm input[type="text"],
+#editUserForm input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#editUserForm input[type="checkbox"] {
+    width: 14px; /* Optional: adjust the width to desired size */
+    height: 10px; /* Optional: adjust the height to desired size */
+    transform: scale(1.5); /* Adjust the scale to desired size */
+    margin-right: 10px; /* Add space between checkbox and label */
+}
+
+
+#editUserForm input[type="text"] {
+    width: calc(100% - 22px); /* Adjusting width to fit padding and border */
+}
+
+#editUserForm input[type="checkbox"] {
+    width: auto; /* Adjusting width for checkbox */
+}
+
+#editUserForm input[type="submit"] {
+    background-color: #007bff;
+    color: rgb(30, 33, 34);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#editUserForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#editUserForm input[type="submit"]:active {
+    background-color: #004494;
+}
+
+
+#editUserForm .cancel {
+    background-color: #ab2222;
+    color: #dee2e6;
+    border: none;
+    margin-top: 10px; /* Add some space above the cancel button */
+    margin: 0px;
+}
+
+#editUserForm .cancel:hover {
+    background-color: #f51b1b;
+}
+
+#editUserForm .cancel:active {
+    background-color: #f51b1b;
+}
+#editUserForm .cancel:hover {
+    background-color: #f14343;
+}
+
+#editUserForm label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+                    /* Add user form */
+
+#addUserForm {
+    display: none; /* Initially hidden */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(30, 33, 34);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#addUserForm h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#addUserForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#addUserForm input[type="text"],
+#addUserForm input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#addUserForm input[type="checkbox"] {
+    width: 14px; /* Optional: adjust the width to desired size */
+    height: 10px; /* Optional: adjust the height to desired size */
+    transform: scale(1.5); /* Adjust the scale to desired size */
+    margin-right: 10px; /* Add space between checkbox and label */
+}
+
+#addUserForm input[type="text"] {
+    width: calc(100% - 22px); /* Adjusting width to fit padding and border */
+}
+
+#addUserForm input[type="checkbox"] {
+    width: auto; /* Adjusting width for checkbox */
+}
+
+#addUserForm input[type="submit"] {
+    background-color: #007bff;
+    color: rgb(30, 33, 34);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addUserForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#addUserForm input[type="submit"]:active {
+    background-color: #004494;
+}
+
+#addUserForm .cancel {
+    background-color: #ab2222;
+    color: #dee2e6;
+    border: none;
+    margin-top: 10px; /* Add some space above the cancel button */
+    padding: 10px; /* Added padding to match the style of other buttons */
+    border-radius: 5px; /* Added border-radius to match the style of other buttons */
+    cursor: pointer; /* Added cursor pointer to indicate it's clickable */
+    transition: background-color 0.3s; /* Added transition for hover effect */
+    margin: 0px;
+}
+
+#addUserForm .cancel:hover {
+    background-color: #f51b1b;
+}
+
+#addUserForm .cancel:active {
+    background-color: #d11a1a;
+}
+
+
+#addUserForm label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

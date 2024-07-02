@@ -1,0 +1,393 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(30, 33, 34);
+    color: rgb(200, 195, 188);
+    border-color: rgb(115, 107, 94);
+}
+
+.header {
+    background: rgb(30, 33, 34);;
+    color: white;
+    padding: 20px 30px;  /* Increased padding for better visual spacing */
+    text-align: left;
+    display: flex;
+    align-items: center;  /* Aligns the logo vertically in the middle */
+    justify-content: space-between;  /* This helps if there are elements on the right side */
+    
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);  /* Adds depth with shadow */
+    padding: 5px;  /* Add padding to give the logo some breathing room */
+    background: white;  /* Optional: a contrasting background */
+    border-radius: 4px;  /* Optional: rounded corners */
+}
+
+
+.logo:hover {
+    opacity: 0.8;  /* Slight opacity change on hover */
+    cursor: pointer;  /* Indicates the logo is clickable */
+}
+
+
+.nav {
+    
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(30, 33, 34);
+    color: rgb(255, 255, 254);
+    border-color: rgb(115, 107, 94);
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fefefe;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.SearchBar {
+    
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(30, 33, 34);
+    color: rgb(200, 195, 188);
+    border-color: rgb(115, 107, 94);
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+    background-color: rgb(30, 33, 34);
+    color:#fefefe
+    
+}
+
+.search-form input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.search-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar label {
+    display: block;
+    padding: 5px 10px;
+    margin: 5px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar label:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.sidebar input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    overflow: auto;
+}
+
+.footer {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    
+    
+}
+
+
+/* this is for the dropdown */
+.dropdown{
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);   
+    background-color: rgb(30, 33, 34);
+    color:#fefefe;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+}
+
+
+.model-dropdown {
+    background-color: rgb(30, 33, 34); /* Light background */
+    color:rgb(255, 255, 255) ; /* Dark text for easy reading */
+    padding: 8px; /* Padding to make dropdown larger and easier to interact with */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light grey border */
+    width: auto; /* Auto width based on content */
+    outline: none; /* Removes the default focus outline to customize styling */
+    border: 1px solid #007bff; 
+
+}
+
+/* Dropdown arrow styling */
+.model-dropdown:focus {
+    border-color: #0056b3; /* Blue border on focus */
+}
+
+.search-results {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    width: 80%;
+}
+
+.search-results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.search-results th, .search-results td {
+    border: 1px solid #675151;
+    padding: 8px;
+    text-align: left;
+}
+.search-results td{
+    border-bottom: 1px solid #5e4f4f;
+    padding: 10px;
+}
+
+.search-results th {
+    background-color: #860404;
+    color: white;
+    padding: 10px;
+    
+}
+
+/* this is for the table */
+.search-results tr:nth-child(even) {
+    background-color: rgb(30, 33, 34);
+}
+
+.search-results tr:hover {
+    background-color: #483f3f;
+}
+
+/* this is for the links */
+.search-results a {
+    color: #ffffff;
+    /* text-decoration: none; */ 
+}
+
+.search-results a:hover {
+    color: #45a049;
+}
+
+.loader {
+    width: 44.8px;
+    height: 44.8px;
+    position: relative;
+    transform: rotate(45deg);
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    top: -6px;
+
+  }
+  
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50% 50% 0 50%;
+    background: #0000;
+    background-image: radial-gradient(circle 11.2px at 50% 50%,#0000 94%, #ff4747);
+  }
+  
+  .loader:after {
+    animation: pulse-ytk0dhmd 1s infinite;
+    transform: perspective(336px) translateZ(0px);
+  }
+  
+  @keyframes pulse-ytk0dhmd {
+    to {
+      transform: perspective(336px) translateZ(168px);
+      opacity: 0;
+    }
+  }
+    
+/* style for no result found when search in main and Guest */ 
+.no-results {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-top: 20px;
+}
+.search-results {
+    max-width: 800px;
+    margin: auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-results p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.search-results a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.search-results a:hover {
+    text-decoration: underline;
+}
+
+.results-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Added gap for better spacing */
+}
+
+.software, .rooms{
+    width: 48%;
+}
+
+.search-results h3 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.search-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-results li {
+    background: #444;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    
+}
+
+.search-results li:hover {
+    background: #555;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .results-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .software, .rooms, .equipment {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-results h3 {
+        text-align: center;
+    }
+/* style for the logout button */    
+}
+.logoutButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: rgb(216, 195, 195);
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.logoutButton a {
+    color: rgb(235, 238, 239); 
+    text-decoration: none;
+}
+
+
+.logoutButton:hover {
+    background-color: #2b982b; 
+    color: rgb(255, 255, 255); 
+    transform: translateY(-2px);
+}
+
+.logoutButton:active {
+    background-color: #a00b2e;
+    transform: translateY(0);
+}

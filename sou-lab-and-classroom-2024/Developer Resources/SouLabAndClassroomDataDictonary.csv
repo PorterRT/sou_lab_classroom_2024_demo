@@ -1,0 +1,24 @@
+Table Name,Column Name,Data Type,Nullable,Default,Key,Description
+AdminAccess,UserNum,int(11),NO,NULL,PRIMARY KEY,Auto-incremented unique ID
+AdminAccess,UserName,varchar(25),YES,NULL,,Name of the user Must be @sou.edu
+AdminAccess,SuperAdmin,tinyint(1),NO,0,,"Flag indicating super admin (1 for true, 0 for false)"
+Buildings,AssignedBuildNum,int(11),NO,NULL,PRIMARY KEY,Unique building number
+Buildings,BuildingName,varchar(255),YES,NULL,,Name of the building
+Buildings,SOUmapLinkDir,varchar(255),YES,NULL,,Link for SOU map directions to the building
+EquipSoft,SerialNum,varchar(35),NO,NULL,PRIMARY KEY,Serial number of the equipment
+EquipSoft,AutoGenNumS,int(11),NO,NULL,,Auto-generated software number
+EquipSoft,SerialNum,varchar(35),NO,NULL,,Serial number of the equipment
+Equipment,SerialNum,varchar(35),NO,NULL,PRIMARY KEY,Serial number of the equipment
+Equipment,Name,varchar(30),YES,NULL,,Friendly Name of the equipment
+Equipment,Type,varchar(45),YES,NULL,,"Type of equipment i.e. Desktop, laptop, projector, printer"
+Equipment,LeaseYear,varchar(25),YES,NULL,,Lease year of the equipment
+Equipment,AssignedBuildNum,int(11),YES,NULL,FOREIGN KEY,Assigned building number
+Equipment,RoomNum,varchar(3),YES,NULL,,Room number where the equipment is located
+Equipment,Model,varchar(80),YES,NULL,FOREIGN KEY,Model of the equipment
+Maintenance,AutoGenNumM,int(11),NO,NULL,PRIMARY KEY,Auto-incremented maintenance ID
+Maintenance,SerialNum,varchar(35),NO,NULL,,Serial number of the equipment
+Maintenance,Notes,longtext,YES,NULL,,Notes regarding maintenance
+Maintenance,Date,date,YES,NULL,FOREIGN KEY,Date of maintenance Auto generated
+Software,AutoGenNumS,int(11),NO,NULL,PRIMARY KEY,Auto-generated software number
+Software,ProgramName,varchar(60),YES,NULL,,Name of the software program
+Software,Category,varchar(60),YES,NULL,,Category of the software

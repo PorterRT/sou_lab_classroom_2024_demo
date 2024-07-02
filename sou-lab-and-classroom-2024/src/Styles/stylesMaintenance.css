@@ -1,0 +1,351 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+    background-color: rgb(30, 33, 34);
+    color: rgb(200, 195, 188);
+    border-color: rgb(115, 107, 94);
+
+}
+
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    table-layout: fixed;
+    width: 100%;
+    /*overflow-wrap:*/ /* break-word;/* Allow long words to be able to break and wrap onto the next line */
+    hyphens: auto; /* Allow the browser to insert hyphens where appropriate */
+    overflow-wrap: break-word; /* Ensure that the browser will break lines between letters if necessary */
+
+}
+
+/* change the color of Serial Number link */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+th {
+    background-color: #860404;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #5e4f4f;
+    background-color: rgb(30, 33, 34);
+}
+
+
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+    background-color: rgb(30, 33, 34);
+}
+
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #483f3f;
+}
+
+
+.home-link {
+    display: inline-block; /* Allows us to set padding and margins */
+    padding: 10px 20px; /* Add space around the text */
+    background-color: #007bff; /* Set a background color */
+    color: #ffffff; /* Set the text color */
+    text-decoration: none; /* Remove the underline from the link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.home-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+input[type="text"], select, button {
+    padding: 10px;
+    border: 1px solid #317ac7;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    background-color: rgb(30, 33, 34);
+    color: #fffafa;
+}
+.nav a:hover {
+    background-color: #0056b3;
+}
+
+.sort-form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.home-link {
+    display: block;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.home-link:hover {
+    background-color: #0056b3;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* So the width includes padding */
+    background-color: rgb(30, 33, 34);
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.submit-btn:hover {
+    opacity: 1;
+}
+
+/* General reset for form elements */
+form {
+    margin: 20px 0;
+}
+
+/* Style the 'Add Note' button and 'Cancel' button */
+button {
+    background-color: #3aa63a; /* Green color for 'Add New Entry' */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1c4762; /* Darker green on hover */
+}
+
+button.Cancel {
+    background-color: #f44336; /* Red color for 'Cancel' */
+    margin-left: 10px; /* Spacing between buttons */
+}
+
+button.Cancel:hover {
+    background-color: #1c4762;
+}
+
+input.Add.Note:hover{
+    background-color: #1c4762;
+}
+input.Add.Note{
+    background-color: #35ba12; /* Green color for 'Add New Entry' */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style the note textarea */
+textarea#note {
+    width: 100%; /* Full-width */
+    height: 80px; /* Smaller height */
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Space before buttons */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Disable resizing */
+    box-sizing: border-box;
+    transition: border 0.3s ease-in-out;
+    color: #fffafa;
+}
+
+textarea#note:focus {
+    border-color: #4CAF50; /* Highlight border color when focused */
+    outline: none; /* Remove default focus outline */
+}
+
+/* If there's a label for the textarea, style it too */
+label[for="note"] {
+    display: block;
+    margin-bottom: 5px;
+    color: #fffafa;
+    font-size: 14px; /* Smaller font size for the label */
+}
+
+/* Style for the delete button */
+.Delete {
+    background-color: #8b0000; /* Red color for delete */
+    color: white;
+    padding: 8px 12px; /* Padding around the text and icon */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Mouse cursor changes to indicate clickable */
+    font-size: 0.9rem; /* Font size for the text */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Style for the Font Awesome icon inside the button to ensure it has some space around it */
+.Delete .fas {
+    color: #ece0e0; /* Change color if needed */
+    padding: 0; /* Adjust padding if needed */
+}
+
+
+/* Hover effect for delete button */
+.Delete:hover {
+    background-color: #ead196; /* Slightly darker red on hover */
+}
+
+/* Style for the Font Awesome icon inside the button */
+.Delete .fas {
+    margin-right: 5px; /* Space between the icon and text */
+    /* If you need to adjust the size of the icon, you can do it here with font-size */
+}
+
+.maintenance-notes {
+    width: 100px; /* Adjust as needed */
+    max-height: 200px; /* Adjust as needed */
+    white-space: pre-wrap; /* Wraps text and preserves newlines */
+    overflow: auto; /* Add a scrollbar if the content overflows */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #217761;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    border-radius: 20px;
+    
+  }
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-44%);    
+
+  }
+  
+  /* Dropdown Content (Hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(30, 33, 34);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: auto;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #3e8e41}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
+  

@@ -1,0 +1,394 @@
+
+/* Basic reset */
+body {
+    background-color: rgb(30, 33, 34); /* Dark grey color for the background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;/* Light grey color for the text */
+    color: rgb(200, 195, 188);
+    border-color: rgb(115, 107, 94);
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+}
+
+.containter{
+    flex:1;
+}
+
+html {
+
+    color-scheme: dark !important;
+}
+
+.home-link {
+    display: block;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    text-align: right;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.home-link:hover {
+    background-color: #0056b3;
+}
+
+.nav a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+input[type="text"], select, button {
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #860404;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #5e4f4f;
+
+}
+
+tr:nth-child(even) {
+
+    background-color: rgb(30, 33, 34);
+}
+
+tr:hover {
+    background-color: #483f3f;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+
+
+/* Responsive table */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-child(even) {
+        background-color: initial;
+    }
+    tr td {
+        display: block;
+        text-align: right;
+    }
+    tr td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    tr {
+        margin-bottom: 15px;
+        display: block;
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+}
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    #addModal {
+        max-width: 90%;
+        width: auto;
+    }
+}
+
+/* When modal is active, prevent background scrolling */
+body.modal-active {
+    overflow: hidden;
+}
+
+
+/*This for SearchBar style*/
+.SearchBar {
+
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px;
+    display: flex; /* Use flexbox to center align items */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Add some shadow for depth *!*/
+     /* Set a max width */
+    margin: 30px auto; /* Center the search bar and add some margin to the top and bottom */
+}
+
+.SearchBar input[type="text"] {
+    border: 2px solid #3c5c7e; /* Add a border to the input */
+    margin-right: 10px; /* Add some space between the input and the button */
+    padding: 10px 20px; /* Make the input taller and have some space on the sides */
+    /*width: calc(100% - 120px); !* Adjust width to account for button *!*/
+    border-radius: 20px; /* Round the corners of the input field */
+    font-size: 16px; /* Increase font size for better readability */
+    
+}
+
+.SearchBar input[type="submit"] {
+    border: none; /* Remove the border */
+    background-color: #007bff; /* Use a solid color for the button */
+    color: white; /* Contrast the text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border-radius: 20px; /* Round the corners */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+    font-size: 16px; /* Match the font size with the input */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+    border: #5e4f4f;
+}
+
+.SearchBar input[type="submit"]:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+}
+
+
+
+.software-selection {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px; /* Adjust as necessary for your layout */
+    margin-bottom: 20px;
+}
+
+.software-selection input[type='checkbox'] {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.software-selection label {
+    margin-right: 15px; /* Space out the labels */
+    cursor: pointer;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.software-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    background: white;
+}
+
+.button-add {
+    background-color: #28a745; /* Green color for adding items */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button-add:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slight increase in size on hover for feedback */
+}
+
+.button-remove {
+    background-color: #dc3545; /* Red color for removing items */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button-remove:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: scale(1.05); /* Slight increase in size on hover for feedback */
+}
+
+/*control the size of dropdown menu*/
+.select2-container{
+    width: 150px !important;
+}
+/* Adjust Select2 dropdown position and z-index */
+.select2-container--default .select2-dropdown {
+    position: absolute;
+    z-index: 100;
+    width: 150px; /* Adjust width as needed */
+    min-height: 200px; /* Adjust minimum height as needed */
+}
+
+
+button.Manage.Software {
+    display: flex; /* Make the button a flex container */
+    flex-direction: row; /* Set the direction of the content to a row */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    width: 100px;
+    height: 50px;
+}
+    
+
+
+
+#managementForm {
+    background-color: rgb(30, 33, 34);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center; /* Center align the content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+#managementForm label {
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+#managementForm select {
+    width: calc(100% - 40px); /* Adjust the width of the select dropdown */
+    padding: 12px;
+    margin: 0 auto; /* Center the select dropdown */
+    border: 1px solid rgb(162, 128, 128,1);
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#managementForm .execute-button,
+#managementForm .cancel-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Add some margin to the buttons */
+    border-radius: 20px
+}
+
+#managementForm .execute-button:hover,
+#managementForm .cancel-button:hover {
+    background-color: #45a049;
+}
+
+#managementForm .cancel-button {
+    background: #8a0101;
+}
+/* Style the Select2 box itself */
+.select2-container--default .select2-selection--single {
+    background-color: #444; /* Light background color */
+    border: 1px solid #aaa; /* Darker border */
+    border-radius: 4px; /* Rounded corners */
+    height: 36px; /* Specific height for the select box */
+
+}
+
+/* Style the text within the Select2 box */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444; /* Text color */
+    line-height: 34px; /* Center the text */
+}
+
+/* Style the dropdown arrow */
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #888 transparent transparent; /* Arrow color */
+    border-style: solid;
+    border-width: 5px 5px 0; /* Arrow size */
+    height: 0;
+
+}
+
+/* Style the dropdown options */
+.select2-container--default .select2-dropdown .select2-results__option {
+    padding: 6px; /* Padding for each option */
+    background: #fff; /* Background of the options */
+    color: #444; /* Text color of the options */
+}
+
+/* Style the dropdown options when they are being hovered over */
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #5682e6; /* Highlight color */
+    color: white; /* Highlighted text color */
+}
